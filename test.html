@@ -1,304 +1,242 @@
 
-<html>
+<!DOCTYPE html><html><head><title>HIT</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script></head><body><form name="mturk_form" method="post" id="mturk_form" action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" value="" name="assignmentId" id="assignmentId" /><!-- Bootstrap v3.0.3 -->
+<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+<script rel="text/javascript">
+	$( document ).ready(function() {
+	  	$('button.btn-next-carousel').click(function(e){
+	  		e.preventDefault();
+	  		$('#mycarousel').carousel('next');
+	  	})
 
-<head>
-    <meta charset="utf-8">
-    <title>Video Recording Booth - Welcome</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="javascripts/instrumentation.js" charset="utf-8"></script>
-    <script src="javascripts/azure-storage.blob.min.js" charset="utf-8"></script>
-</head>
-
-<body class="w3-myfont">
-    <div id="welcome-container" class="w3-container vb-nopadding w3-animate-right">
-        <header class="w3-container w3-center w3-blue">
-            <h4>Webcam clip collection</h4>
-        </header>
-        <div class="w3-container w3-margin w3-large w3-center">
-            <p>Participation in this HIT is voluntary and is subject to the terms and conditions presented in the next page.</p>
-            <p>Thank you for your help!</p>
-        </div>
-        <div class="w3-row w3-display-container">
-            <div class="w3-col m4 l2 w3-display-middle w3-center w3-container">
-                <button id="welcome-btn" class="w3-btn w3-block w3-large w3-round-large w3-white w3-border w3-border-blue">
-                    <b class="w3-text-blue w3-hover-text-cobalt">Continue</b>
-                </button>
-            </div>
-        </div>
+	  	$('input#submitButton').appendTo($('div#submit-button-container'));
+	});
+	
+</script>
+	
+<div class="carousel slide" data-interval="false" pause="false" data-ride="carousel" data-wrap="false" id="mycarousel">
+ 
+ <div class="carousel-inner">
+  <div class="item active" id="Overview">
+   <section class="container" id="Survey" style="margin-bottom:15px; padding:10px; color:#333333; font-family: Verdana, Geneva, sans-serif; font-size:1em;">
+   <div class="row col-xs-12 col-md-12"><!-- Instructions -->
+   <div class="panel panel-primary">
+   <div class="panel-heading"><strong>Overview</strong></div>
+   <fieldset>
+   <ul>
+    <li>This survey takes approximately 5 minutes to complete, with a time limit of 1 hour.</li>
+    <li>Please use Chrome, Safari, or Mozilla Firefox for this task.</li>
+    <li>A high-speed Internet connection is recommended.</li>
+   </ul>
+   </fieldset>
+   </div>
+   </div>
+   </section>
+   <p style="text-align: center;"><button class="btn btn-lg btn-success btn-next-carousel carousel-control-next" name="T1Answer">BEGIN</button></p>
+  </div>
+  
+  <div class="item" id="Main">
+   <table class="table">
+    <caption>
+    <div style="text-align: center;">
+    <div style="display: inline-block; text-align: left;">
+    <br><b><u>Instructions:</u></b>
+    <br>Please zoom out to see the full survey.
+    <br>Your task is to classify lawyers' voicemail recordings.
+    <br>
+    <br>There are 2 voicemails per row. Listen to both voicemails.
+    <br>Each pair of voicemails has a similar mean pitch, but only one has a significantly different secondary mode.
+    <br>Your task is to identify which voicemail displays codeswitching i.e. has a distinctly different secondary mode.
+    <br>
+    <br>Please refer to <a href="http://individual.utoronto.ca/halberstam/Voice_at_Work.pdf" target="_blank">http://individual.utoronto.ca/halberstam/Voice_at_Work.pdf</a> for a definition of codeswitching.
+    <br>The study finds that codeswitching behaviour is associated with the out-group, and may reflect vulnerability they experience at work 
+    <br>as well as disproportionate pressures to conform to in-group norms.  
+    <br><b>Note that you are not asked to discern between high and low voice pitch, but rather a subtle (3-4%) switch to a male voice frequency mode.</b>
+    <br>
+    <br>Note: Please use Chrome, Safari, or Mozilla Firefox for this task.</div></div>
+    <br>
+    <br>
+    <br></caption>
+	<tr>
+	    <th></th>
+	    <th>Voicemail 1</th>
+	    <th>Voicemail 2</th>
+	    <th>Which voicemail displays codeswitching?</th>
+	    <th>Comments</th>
+	</tr>
+	<tr>
+        <td>1.</td>
+        <td><audio controls="controls" id="12128484419_00_29_33_38_19_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12128484419_00_29_33_38_19_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="12123904511_01_05_55_25_87_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12123904511_01_05_55_25_87_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="01" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="01" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments01"></td>
+    </tr>
+	<tr>
+        <td>2.</td>
+        <td><audio controls="controls" id="12138918784_03_30_00_47_286_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12138918784_03_30_00_47_286_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="13053294493_02_26_54_29_2_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_13053294493_02_26_54_29_2_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="02" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="02" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments02"></td>
+    </tr>
+	<tr>
+        <td>3.</td>
+        <td><audio controls="controls" id="12028793413_00_59_35_43_99_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12028793413_00_59_35_43_99_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="16196992612_06_33_24_38_7_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_16196992612_06_33_24_38_7_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="03" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="03" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments03"></td>
+    </tr>
+	<tr>
+        <td>4.</td>
+        <td><audio controls="controls" id="17132211323_03_25_13_7_281_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_17132211323_03_25_13_7_281_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="13124070519_02_54_54_25_260_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_13124070519_02_54_54_25_260_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="04" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="04" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments04"></td>
+    </tr>
+	<tr>
+        <td>5.</td>
+        <td><audio controls="controls" id="12128395447_02_21_55_36_74_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12128395447_02_21_55_36_74_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="13104428828_08_53_00_8_7_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_13104428828_08_53_00_8_7_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="05" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="05" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments05"></td>
+    </tr>
+    </table>
+    <br>
+    <br><div style="text-align: center; font-size:20 ;"><strong>IMPORTANT: Please write/record all answers on a <u>separate document</u> before continuing</strong></div>
+    <br>
+    <br>
+    <br>
+    <p style="text-align: center;"><button class="btn btn-lg btn-success btn-next-carousel carousel-control-next" name="T2Answer">Click to continue when you have recorded all your answers</button></p>
     </div>
-    <div id="incompatible-browser-container" class="w3-hide w3-container  vb-nopadding w3-animate-right">
-        <header class="w3-container w3-center w3-red">
-            <h4>We are sorry! Your browser is not supported</h4>
-        </header>
-        <div id="browsers-list" class="w3-container w3-large w3-center w3-margin">
-            <p>Please use one of the supported browsers below</p>
-            <ul class="w3-ul w3-center w3-hoverable">
-                <li>
-                    <a class="w3-block" target="_blank" href="https://www.mozilla.org">Firefox</a>
-                </li>
-                <li>
-                    <a class="w3-block" target="_blank" href="https://www.google.com/chrome/">Chrome</a>
-                </li>
-                <li>
-                    <a class="w3-block" target="_blank" href="https://www.opera.com/">Opera</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="incompatible-os-container" class="w3-hide w3-container  vb-nopadding w3-animate-right">
-        <header class="w3-container w3-center w3-red">
-            <h4>We are sorry! your OS is not yet supported</h4>
-        </header>
-        <div id="incompatible-os-info" class="w3-container w3-large w3-center w3-margin"></div>
-            <p>Unfortunately, MacOS is currently not supported for this experiment.</p>
-        </div>
-    </div>
-    <div id="worker-info-container" class="w3-hide w3-container vb-nopadding w3-animate-right">
-        <header class="w3-container w3-center w3-blue">
-            <h4>Please fill in your information</h4>
-        </header>
-        <div class="w3-container w3-large w3-center w3-margin">
-            <p>We will use this information to ensure we have enough diversity in the data we are using to improve our machine
-                learning algorithms. Before we begin please fill out the following:</p>
-            <div id="worker-info-inputs">
-                <div class="w3-row-padding">
-                    <div class="w3-quarter"> &nbsp;</div>
-                    <div class="w3-container w3-half w3-margin-bottom">
-                        <label for="gender">Gender</label>
-                        <select required class="w3-select worker-info-input" name="gender" id="worker-gender">
-                            <option value=""></option>
-                            <option value="f">Male</option>
-                            <option value="m">Female</option>
-                            <option value="o">Other</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="w3-row-padding">
-                    <div class="w3-quarter"> &nbsp;</div>
-                    <div class="w3-container w3-half w3-margin-bottom">
+    <div class="item" id="Main2">
+    <table class="table">
+    <caption>
+    <div style="text-align: center;">
+    <div style="display: inline-block; text-align: left;">
+    <br><b><u>Instructions:</u></b>
+    <br>
+    <br>Now, see how your answers to the previous questions compare against the correct answers.
+    <br>Listen to the clips again to see if you can discern codeswitching.
+    <br>
+    <br>
+    <br></caption>
+    <tr>
+	    <th></th>
+	    <th>Voicemail 1</th>
+	    <th>Voicemail 2</th>
+	    <th>Codeswitcher (correct answer)</th>
+	</tr>
+	<tr>
+        <td>1.</td>
+        <td><audio controls="controls" id="12128484419_00_29_33_38_19_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12128484419_00_29_33_38_19_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="12123904511_01_05_55_25_87_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12123904511_01_05_55_25_87_trimmed.wav" type="audio/wav" /></audio></td>
+        <td>Voicemail 1</td>
+    </tr>
+	<tr>
+        <td>2.</td>
+        <td><audio controls="controls" id="12138918784_03_30_00_47_286_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12138918784_03_30_00_47_286_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="13053294493_02_26_54_29_2_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_13053294493_02_26_54_29_2_trimmed.wav" type="audio/wav" /></audio></td>
+        <td>Voicemail 2</td>
+    </tr>
+	<tr>
+        <td>3.</td>
+        <td><audio controls="controls" id="12028793413_00_59_35_43_99_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12028793413_00_59_35_43_99_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="16196992612_06_33_24_38_7_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_16196992612_06_33_24_38_7_trimmed.wav" type="audio/wav" /></audio></td>
+        <td>Voicemail 2</td>
+    </tr>
+	<tr>
+        <td>4.</td>
+        <td><audio controls="controls" id="17132211323_03_25_13_7_281_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_17132211323_03_25_13_7_281_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="13124070519_02_54_54_25_260_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_13124070519_02_54_54_25_260_trimmed.wav" type="audio/wav" /></audio></td>
+        <td>Voicemail 1</td>
+    </tr>
+	<tr>
+        <td>5.</td>
+        <td><audio controls="controls" id="12128395447_02_21_55_36_74_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12128395447_02_21_55_36_74_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="13104428828_08_53_00_8_7_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_13104428828_08_53_00_8_7_trimmed.wav" type="audio/wav" /></audio></td>
+        <td>Voicemail 1</td>
+    </tr>
+	</table>
+	<br>
+	<br>
+	<br>
+	<br>
+    <table class="table">
+    <caption>
+    <div style="text-align: center;">
+    <div style="display: inline-block; text-align: left;">
+    <br><b><u>Instructions:</u></b>
+    <br>
+    <br>With your updated understanding of codeswitching, classify a new set of clips.
+    <br>
+    <br>
+    <br></caption>
+    <tr>
+	    <th></th>
+	    <th>Voicemail 1</th>
+	    <th>Voicemail 2</th>
+	    <th>Which voicemail displays codeswitching?</th>
+	    <th>Comments</th>
+	</tr>
 
-                        <label for="age">Age</label>
-                        <select required class="w3-select worker-info-input" name="age" id="worker-age">
-                            <option value=""></option>
-                            <option value="18-25">18-25</option>
-                            <option value="26-30">26-30</option>
-                            <option value="31-35">31-35</option>
-                            <option value="36-45">36-45</option>
-                            <option value="46-55">46-55</option>
-                            <option value="56 or older">56 or older</option>
-                        </select>
-                    </div>
-                </div>
+	<tr>
+        <td>6.</td>
+        <td><audio controls="controls" id="12127013334_01_36_36_31_120_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12127013334_01_36_36_31_120_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="12155643058_02_53_23_18_27_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12155643058_02_53_23_18_27_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="06" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="06" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments06"></td>
+    </tr>
+	<tr>
+        <td>7.</td>
+        <td><audio controls="controls" id="12159814223_02_02_10_30_166_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12159814223_02_02_10_30_166_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="16508023623_04_09_20_6_0_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_16508023623_04_09_20_6_0_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="07" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="07" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments07"></td>
+    </tr>
+	<tr>
+        <td>8.</td>
+        <td><audio controls="controls" id="18587208917_03_52_48_19_330_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_18587208917_03_52_48_19_330_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="12123732680_00_30_49_6_57_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12123732680_00_30_49_6_57_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="08" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="08" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments08"></td>
+    </tr>
+	<tr>
+        <td>9.</td>
+        <td><audio controls="controls" id="12127352608_02_06_55_42_197_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12127352608_02_06_55_42_197_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="14048817416_01_53_18_15_145_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_14048817416_01_53_18_15_145_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="09" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="09" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments09"></td>
+    </tr>
+	<tr>
+        <td>10.</td>
+        <td><audio controls="controls" id="12123733503_00_24_47_22_46_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_12123733503_00_24_47_22_46_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><audio controls="controls" id="13125583129_03_22_25_33_71_trimmed" preload="auto"><source src="http://128.100.177.31/public/reversed/reversed_13125583129_03_22_25_33_71_trimmed.wav" type="audio/wav" /></audio></td>
+        <td><div class="input-group" style="float:left"><label style="font-weight:normal">Voicemail 1&nbsp;<input name="10" value="1" type="radio" required></label></div>
+            <div class="input-group" style="float:left"><label style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Voicemail 2&nbsp;<input name="10" value="2" type="radio" required></label></div>
+        <td><input type="text" name="comments10"></td>
+    </tr>
+   </table>
+   <br>
+   <br>
+   <br> <div style="text-align: center; font-size:20">Thank you for your contribution.</div>
+   <br>
+   <br>
+   <div class="panel-body text-center" id="submit-button-container">&nbsp;</div>
+  </div>
+ </div>
+</div>
+<!-- close container -->
+<style>fieldset{padding:10px; background:#fbfbfb; border-radius:5px; margin-bottom:10px;}</style>
 
-                <div class="w3-panel">
-                    <div id="worker-info-container" class="w3-center">
-                        <div class="w3-bar">
-                            <button id="worker-info-btn" class="w3-btn w3-block w3-large w3-round-large w3-white w3-border w3-border-blue">
-                                <b class="w3-text-blue w3-hover-text-cobalt">CONTINUE</b>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-    <div id="existing-worker-container" class="w3-container w3-hide vb-nopadding w3-animate-right">
-        <header class="w3-container w3-center w3-orange">
-            <h4>We are sorry! You are allowed only once to complete this assignment.</h4>
-        </header>
-        <div id="existing-worker-message" class="w3-container w3-large w3-center w3-margin">
-            <p>Hi! We are sorry! For this research project we only allow each worker only once to complete this assignment.
-                Please try again later sometime. </p>
-        </div>
-    </div>
-    <div id="consent-form-container" class="w3-hide w3-container vb-nopadding w3-animate-right">
-        <header class="w3-container w3-blue w3-center">
-            <h4>MEDIA RELEASE AND CONSENT FORM</h4>
-        </header>
-        <div id="model-release-form-content" class="w3-panel w3-normal w3-large">
-            <div class="w3-container w3-white w3-large">
-                <p>Thank you for participating in the Project. Your participation in the Project is voluntary. If you participate
-                    in the Project, you agree to be governed by the terms herein. The purpose of this project is to record
-                    and collect video and audio data to be used for research purposes and to train and/or evaluate machine
-                    learning models used by Microsoft audio and visual-related technologies.</p>
-            </div>
-
-            <div class="w3-container">
-                <p>
-                    <b>Please read the terms carefully and sign in the space provided to indicate that you have read and understood
-                        the information furnished in this Media Release and Consent Form.</b>
-                </p>
-            </div>
-
-            <div class="w3-container ">
-                <p>
-                    <b>“Project”:</b> The Project will consist of a single session where you will be requested to say sentences
-                    from a script while being recorded on a video camera.</p>
-
-            </div>
-            <div class="w3-container ">
-                <p>
-                    <b>“Media”:</b> any audio recording, video, film, photograph, or illustration generated by your participation
-                    in this Project</p>
-
-            </div>
-            <div class="w3-container">
-
-                <h4>Your Authority to Participate</h4>
-
-                <p>You represent that: (a) you have the full right and authority to sign this form; (b) you are not under 18
-                    years of age; (c) the rights you grant to Microsoft under this form will not be limited in any way by
-                    any other contract or obligation, including any agreement with any union or guild; (d) that you are not
-                    a resident of Illinois, Texas or Washington and (e) you will not disclose to Microsoft any non- public
-                    information, whether yours or a third party’s, without notifying Microsoft in advance. If you reside
-                    in the European Union, you agree that your name, likeness and Media may be transferred outside of the
-                    European Union to the United States, or any other territory.</p>
-            </div>
-            <div class="w3-container">
-
-                <h4>Your Rights, Permissions, Authorization,</h4>
-
-                <p>Your participation in the Project, Media or ancillary material produced in connection with your participation
-                    in the Project (“Material”) is provided as work for hire for Microsoft. You assign any and all intellectual
-                    property rights, ancillary rights and performance rights in connection with the Media to Microsoft for
-                    use by Microsoft, its successors, assigns and licensees worldwide in perpetuity on a complete buyout
-                    basis. To the extent that such rights are not transferable, you provide an irrevocable, fully paid, worldwide
-                    license to Microsoft.</p>
-
-                <p>You grant Microsoft its legal representatives, successors, licensees, and assigns, the unrestricted and irrevocable
-                    rights and releases described herein to use my appearance, form, name, likeness and voice, as contained
-                    in the Media. You agree that the Media may be reviewed by Microsoft employees and/or
-                    <b>third-party</b> vendors engaged by Microsoft. In addition, you agree to release Microsoft and its affiliates
-                    from any and all claims that you may have now or in the future related to your participation in the Project.</p>
-            </div>
-
-            <div class="w3-container">
-                <h4>Waiver and Release of Liability and Assumption of Risk (where applicable)</h4>
-                <p>You agree to release Microsoft, its officers, agents, and employees from any action, claim or demand that
-                    may have for any and all damage, harm, loss or injury you may suffer or sustain by your participation
-                    in the Project.</p>
-                <p>You waive any right to inspect or approve any use of the Media and any payment or additional consideration
-                    for any use of the Media. I understand and agree that the Media may be modified, altered, cropped and
-                    combined with other content such as images, video, audio, text and graphics. I acknowledge and agree
-                    that this release is binding on my heirs and assigns, and that the personal information provided by me
-                    as part of this release may be used and disclosed by Microsoft and its licensees and assigns for the
-                    purposes of selling, licensing and distributing the appearance, form, name, likeness and voice, of the
-                    person indicated above as contained in the Media for commercial purposes.
-                </p>
-
-            </div>
-            <div class="w3-container">
-                <div class="w3-row-padding">
-                    <div class="w3-half">
-                        <label for="agreementDate">Today's date is:</label>
-                        <input disabled type="date" onblur="validateInputs('vb-consent-input')" name="agreementDate" required class="w3-input w3-animate-input w3-large vb-consent-input"
-                            id="agreementDate" autocomplete="off" />
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="w3-container">
-            <div class="w3-row-padding">
-                <div class="w3-col w3-large vb-checkbox-container">
-                    <input type="checkbox" onblur="validateInputs('vb-consent-input')" required name="agreeCheckbox" class="w3-check w3-large vb-consent-input"
-                        id="agreeCheckbox" autocomplete="off" />
-                    <label for="agreeCheckbox">I agree to the conditions entered above</label>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="w3-panel">
-            <div id="acceptance-container" class="w3-center">
-                <div class="w3-bar">
-                    <button id="consent-agreement-btn" class="w3-btn w3-block w3-large w3-round-large w3-white w3-border w3-border-blue">
-                        <b class="w3-text-blue w3-hover-text-cobalt">ACCEPT AND CONTINUE</b>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="recording-container" class="w3-hide w3-container vb-nopadding w3-animate-right">
-        <header class="w3-container w3-center w3-blue">
-            <h4>Video Recording Booth</h4>
-        </header>
-
-        <div class="w3-twothird w3-container" id="videoContainerBlock">
-
-            <div class="w3-container w3-margin-top" id="videoContainer">
-                <video class="w3-block w3-blue" muted="true" autoplay="true" playsinline="true" id="videoPlayer">
-                    <!-- <p id="preview-note" class="w3-text-white" style="z-index: 100">Preview will be shown while recording</p> -->
-                </video>
-            </div>
-            <div id="recording-controls" class="w3-container w3-padding w3-margin w3-large w3-center">
-                <div class="w3-light-grey">
-                    <div id="recording-progress-bar" class="w3-round w3-hide w3-blue"></div>
-                </div>
-                <div class="w3-light-grey">
-                    <div id="uploading-progress-bar" class="w3-round w3-hide w3-blue"></div>
-                </div>
-                <p id="recording-time-displayer" class="w3-animate-opacity w3-hide">
-                    <span id="recording-time-left">0</span> Seconds Left</p>
-                <p id="start-instruction" class="w3-hide w3-animate-opacity">Press button below to start recording.</p>
-                
-                    <div id="allow-media-error" class="w3-hide w3-panel w3-medium">
-                        <p class="w3-text-red w3-animate-opacity">Facing problem accessing your camera, please try following steps to resolve this problem.</p>
-                        <p class="vb-no-margin w3-normal">Please allow/give permission to access camera & microphone and start recording.</p>
-                        <p class="vb-no-margin w3-normal">If you can't see the prompt to give camera permission, check on the right hand side of the address bar.</p>
-                        <p class="vb-no-margin w3-normal">If camera has been used by another program/browser, please close that program/browser and accept this hit again to start recording.</p>
-                    </div>
-                    
-                
-                <p id="upload-failure" class="w3-text-red w3-hide w3-animate-opacity">Failed to upload video, please wait while we initialise the recorder again. Make sure you have stable internet connection and try again.</p>
-                <p id="alert-uploading" class="w3-hide w3-animate-opacity">Please wait while uploading your video recording.</p>
-                <p id="job-completed" class="w3-text-green w3-hide w3-animate-opacity">The recording has been successfully uploaded. You can restart the recording or press Next to complete the HIT.
-                </p>
-                <p id="wait-for-media" class="w3-text-green w3-hide w3-animate-opacity">Please wait while we getting media access.</p>
-                <button id="start-recording-btn" class="w3-hide w3-btn w3-large w3-round-large w3-white w3-border w3-border-blue">
-                    <b class="w3-text-blue w3-hover-text-cobalt">START RECORDING</b>
-                </button>
-                <button id="cancel-recording-btn" class="w3-hide w3-btn w3-large w3-round-large w3-white w3-border w3-border-blue">
-                    <b class="w3-text-blue w3-hover-text-cobalt">CANCEL RECORDING</b>
-                </button>
-                <button id="restart-recording-btn" class="w3-hide w3-btn w3-large w3-round-large w3-white w3-border w3-border-blue">
-                    <b class="w3-text-blue w3-hover-text-cobalt">RESTART RECORDING</b>
-                </button>
-                <button id="show-sub-form-btn" class="w3-hide w3-btn w3-large w3-round-large w3-white w3-border w3-border-blue">
-                    <b class="w3-text-blue w3-hover-text-cobalt">NEXT</b>
-                </button>
-            </div>
-
-        </div>
-        <div class="w3-rest w3-container">
-            <div class="w3-row-padding w3-margin w3-large w3-container" id="recording-instructions">
-                <div class="w3-container" id="static-instructions"></div>
-                <div class="w3-container" id="dynamic-instructions"></div>
-            </div>
-        </div>
-    </div>
-    <div id="completed-container" class="w3-hide w3-container vb-nopadding w3-animate-right">
-        <header class="w3-container w3-center w3-blue">
-            <h4>Video Recording Booth</h4>
-        </header>
-        <div class="w3-container w3-margin w3-large w3-center">
-            <p>Your video was successfully uploaded. Thank you for your participation in this study.</p>
-
-            <button id="submit-task-btn" class="w3-btn w3-large w3-round-large w3-white w3-border w3-border-blue">
-                <b class="w3-text-blue w3-hover-text-cobalt">SUBMIT</b>
-            </button>
-        </div>
-    </div>
-    <form id="mturk-submission" action=""></form>
-
-    <script src="javascripts/vb-recorder.js"></script>
-    <script src="javascripts/vb-booth.js"></script>
-    <script src="javascripts/vb-renderer.js"></script>
-    <script src="javascripts/vb-db-integrations.js"></script>
-    <script src="javascripts/upload-handler.js"></script>
-</body>
-
-</html>
+<p class="text-center"><input type="submit" id="submitButton" class="btn btn-primary" value="Submit" /></p></form><script language="Javascript">turkSetAssignmentID();</script></body></html>
